@@ -1,0 +1,87 @@
+Title:
+ASCENDRA — Gamified Digital Wellness (Web + APK)
+Tagline:
+Lift Your Life, Not Your Screen Time.
+
+Prompt:
+Build a complete responsive web application (exportable as an APK) named "ASCENDRA" — a Pokémon-inspired creature-evolution app to improve student focus and wellness. Keep UI bright, friendly and lightweight; use Lottie/PNG animations for creatures and background. The app must run offline for timers and sync data when online.
+
+CORE REQUIREMENTS
+
+1) Onboarding & Starter Creature Selection
+- Present 3 original creatures (no copyrighted characters): Emberling, LeafPuff, AquaMini.
+- Each creature has 3 evolution stages (baby → mid → guardian) with corresponding images/animations.
+- User selects a starter; selection saved in user profile in Kiro DB.
+
+2) Dashboard screen
+- Show creature centered on an animated world background (subtle looped parallax: clouds, trees, water).
+- Idle creature animation (breathing/moving).
+- XP progress bar and numeric XP.
+- Streak counter (daily streak).
+- Start Focus button.
+- Today's wellness habits (Water, Eye Relaxation, Posture) with check toggles.
+- Daily Quest panel with current quests and progress.
+- Quick Team button to open Team screen.
+
+3) Focus Timer feature
+- Allow user to pick duration via a scroll/slider from 3 minutes up to 120 minutes (default quick buttons: 3, 5, 25, 45).
+- Timer runs offline; store session locally and sync to cloud when back online.
+- While timer runs: creature enters "Focus Mode" animation (glow/charge).
+- If user completes the session: award XP, mark session complete, increment streak. If user cancels/aborts: trigger "sad" animation and optionally a small streak penalty.
+- If user leaves the app during session: show soft warning popup; treat leaving as aborted session.
+
+4) XP & Evolution system
+- XP earned from focus sessions and wellness habits.
+- XP scaling rule: base XP = round(duration_in_minutes * 2). (Example: 25 min -> 50 XP). Add small multipliers for consecutive sessions or streaks.
+- Wellness habits: Water +10 XP, Eye relax +10 XP, Posture check +5 XP.
+- Evolution thresholds: Stage 1->2 at 300 XP, Stage 2->3 at 900 XP (configurable).
+- When threshold reached: show evolution ceremony popup with animation and update creature image to next stage.
+
+5) Wellness Habit Tracking
+- Water intake: tap to confirm, adds XP.
+- Eye relaxation: 20-second guided animation or countdown; completion grants XP.
+- Posture alert: manual toggle / quick posture check that user confirms; reward XP.
+- Maintain a Wellness Score metric (0–100) aggregated from habit completion rates.
+
+6) Streak system
+- Daily streak increments if user completes at least one focus session that day.
+- Streak is displayed prominently on dashboard.
+- Breaking streak triggers a gentle motivational message and creature sadness animation.
+
+7) Daily Quests & Rewards
+- Provide three dynamic daily quests (examples: complete 2 focus sessions, complete all wellness habits, maintain streak today).
+- Completing quests yields XP and cosmetic rewards (hat/skin).
+- Cosmetic items stored in user profile.
+
+8) Team Join & Team Streak Feature
+- Allow CREATE TEAM (generates a unique 6-character code) and JOIN TEAM via code.
+- Team object stores members, daily completion flags, teamStreak, and team badge status.
+- Each day if ALL team members complete ≥1 focus session, teamStreak += 1; otherwise teamStreak resets to 0.
+- Team screen shows members, who completed today, and team streak progress. Team rewards (small XP bonus) for continued streaks.
+
+9) Weekly Summary screen
+- Show focus hours this week, wellness score, creature evolution stage, completed quests, team streak.
+- Provide simple charts (bar/line) and evolution summary animation.
+
+10) Data storage (use Kiro DB)
+- Collections/tables: users, focusSessions, wellnessHabits, quests, teams, evolutionStates, cosmetics
+- Offline-first for timers, local storage queue; sync when online.
+
+11) UI/UX & Assets
+- Bright, friendly, playful UI. Use Lottie animations for creature reactions (happy/sad/tired/evolve/idle).
+- Animated world background behind creature (parallax layers).
+- Soft haptic/sonic feedback on mobile (subtle).
+- Keep screens minimal and demonstrable for hackathon.
+
+12) Deliverables
+- Fully functional responsive web app with PWA capabilities.
+- Exportable APK build (or simple PWA -> APK flow).
+- Offline timer support and database sync.
+- A few sample creatures (PNG + simple Lottie or sprite set) and at least one animation for evolve/happy/sad.
+
+ADDITIONAL NOTES:
+- Implement XP calculation formula and make thresholds configurable from admin/settings.
+- Prioritize privacy: no social-media monitoring; minimal permissions (notifications, local storage).
+- Provide a basic admin/debug screen listing DB entries for quick demo inspection.
+
+End of prompt.
