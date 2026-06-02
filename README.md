@@ -2,7 +2,7 @@
 
 A modern, interactive web application designed to promote digital wellness through gamification. ASCENDRA combines focus timers, progress tracking, and a virtual creature companion to help users maintain healthy digital habits.
 
-## 🎮 Features
+##  Features
 
 - **Focus Timer**: Track and manage focus sessions with customizable timers
 - **Virtual Creature Companion**: Interact with an evolving creature that responds to your wellness activities
@@ -13,7 +13,7 @@ A modern, interactive web application designed to promote digital wellness throu
 - **Mobile-First Design**: Fully responsive interface optimized for mobile devices
 - **Real-time Summary**: Track daily and weekly wellness statistics
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **React 18** with TypeScript
@@ -33,7 +33,7 @@ A modern, interactive web application designed to promote digital wellness throu
 - **PostCSS** - CSS processing
 - **Vite** - Module bundling and HMR
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Ascendra-main/
@@ -66,7 +66,7 @@ Ascendra-main/
 └── vite.config.ts        # Build configuration
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
@@ -119,7 +119,7 @@ Start the production server:
 npm run start
 ```
 
-## 📱 Pages & Routes
+##  Pages & Routes
 
 - **Dashboard** (`/dashboard`) - Overview of wellness metrics
 - **Focus** (`/focus`) - Focus timer and session management
@@ -128,7 +128,7 @@ npm run start
 - **Summary** (`/summary`) - Weekly/monthly wellness summary
 - **Team** (`/team`) - Team collaboration and shared goals
 
-## 🎯 Core Components
+##  Core Components
 
 ### Focus Timer
 Interactive timer component for tracking focus sessions with customizable durations and break periods.
@@ -149,11 +149,11 @@ Responsive layout wrapper ensuring optimal experience across all device sizes.
 ### Bottom Navigation
 Navigation bar for easy access to main features on mobile devices.
 
-## 🗄️ Database
+##  Database
 
 Uses Drizzle ORM for type-safe database operations. Configure your database in `drizzle.config.ts`.
 
-## 🔌 API Routes
+##  API Routes
 
 API endpoints are defined in `server/routes.ts`. Key endpoints include:
 - User management
@@ -161,20 +161,14 @@ API endpoints are defined in `server/routes.ts`. Key endpoints include:
 - Wellness activity logging
 - Team collaboration features
 
-## 📝 Contributing
+##  Contributing
 
 1. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 2. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 3. Push to the branch (`git push origin feature/AmazingFeature`)
 4. Open a Pull Request
+.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🤝 Support
-
-For support, email support@ascendra.app or open an issue on GitHub.
 
 ## 🙏 Acknowledgments
 
